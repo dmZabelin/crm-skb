@@ -1,0 +1,75 @@
+
+@mixin d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+@mixin flex-center {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-start {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+@mixin flex-end {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+@mixin transition($timing, $duration) {
+	-webkit-transition: all $timing $duration;
+	-moz-transition: all $timing $duration;
+	-ms-transition: all $timing $duration;
+	-o-transition: all $timing $duration;
+	transition: all $timing $duration;
+}
+
+@mixin user-select($attr) {
+	-webkit-touch-callout: $attr ;
+	-webkit-user-select: $attr ;
+	-khtml-user-select: $attr ;
+	-moz-user-select: $attr ;
+	-ms-user-select: $attr ;
+	user-select: $attr ;
+}
+
+@mixin placeholder($color, $size) {
+	&::-webkit-input-placeholder {
+		color: $color;
+		font-size: $size;
+		line-height: 1;
+	}
+	&:-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		line-height: 1;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		font-size: $size;
+		line-height: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+		font-size: $size;
+		line-height: 1;
+	}
+}

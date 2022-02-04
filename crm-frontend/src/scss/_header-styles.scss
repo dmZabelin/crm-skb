@@ -1,0 +1,31 @@
+.header {
+	background-color: #fff;
+	box-shadow: 0 1rem 2.5rem rgba(176, 190, 197, 0.32), 0 .3rem .5rem rgba(176, 190, 197, 0.32);
+	&__container {
+	width: 136.6rem;
+	padding: 2rem;
+	align-items: center;
+	}
+	&__logo {
+		margin-right: 5rem;
+		display: block;
+		width: 5rem;
+		height: 5rem;
+	}
+}
+
+.form-search {
+	&__input {
+		padding: 1.2rem 1.6rem;
+		width: 58rem;
+		max-width: 100%;
+		@include placeholder($text-grey, 1.4rem);
+		border: 1px solid rgba(51, 51, 51, .2);
+		font-family: OpenSans, sans-serif;
+		font-size: 1.4rem;
+		color: $text-grey;
+		&:focus {
+			outline: 1px solid rgba(152, 115, 255, .6);
+		}
+	}
+}

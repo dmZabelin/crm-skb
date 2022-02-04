@@ -1,0 +1,248 @@
+.section {
+	padding: 5rem 0 10rem;
+	&__title {
+		margin-bottom: 2.5rem;
+	}
+	&__table {
+		width: 100%;
+	}
+	&__btn {
+		display: flex;
+		padding: 1.4rem 2.7rem;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		background-color: transparent;
+		border: 0.2rem solid $firm;
+		color: $firm;
+		&::before {
+			content: '';
+			margin-right: 1rem;
+			display: inline-block;
+			width: 2.3rem;
+			height: 1.6rem;
+			background-image: url('../img/user-plus.svg');
+		}
+	}
+}
+.table {
+	margin-bottom: 4rem;
+	text-align: left;
+	border-collapse: collapse;
+	&__data-head {
+		padding: 1rem 1.8rem;
+		font-size: 1.2rem;
+		color: $text-grey;
+		font-weight: 400;
+		span {
+			cursor: pointer;
+		}
+	}
+	&__data-head,
+	&__data-body {
+		&:nth-child(1) {
+			width: 10%;
+		}
+		&:nth-child(2) {
+			width: 32%;
+		}
+		&:nth-child(3),
+		&:nth-child(4) {
+			width: 16.5%;
+		}
+		&:nth-child(5) {
+			width: 13%;
+		}
+		&:nth-child(6) {
+			width: 18%;
+		}
+	}
+	&__data-head {
+		&:nth-child(1) {
+			color: $firm;
+		}
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			&::after {
+				content: '';
+				display: inline-block;
+				margin-left: .5rem;
+				width: .8rem;
+				height: .8rem;
+				background-image: url("../img/arrow.svg");
+			}
+		}
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4) {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+		&:nth-child(2) {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			&::before {
+				content: 'А-Я';
+				margin-left: .3rem;
+				color: $firm;
+				font-size: 1rem;
+				order: 1;
+			}
+		}
+	}
+	&__body {
+		.table__row {
+			background-color: #fff;
+			border-bottom: 1px solid rgba(200, 197, 209, .5);
+		}
+	}
+	&__data-body {
+		position: relative;
+		padding: 1.8rem;
+		&:nth-child(1) {
+			color: $text-grey;
+			font-size: 1.2rem;
+		}
+		& > span {
+			display: inline-block;
+			padding-left: .5rem;
+			color: $text-grey;
+		}
+	}
+	&__contacts {
+		position: absolute;
+		top: 50%;
+		left: 1.8rem;
+		flex-wrap: wrap;
+		margin-left: -0.35rem;
+		width: 12rem;
+	}
+}
+.contacts {
+	&__btn {
+		position: relative;
+      z-index: 1;
+		width: 1.6rem;
+		height: 1.6rem;
+		border-radius: 50%;
+		margin: .35rem;
+		&::before {
+			content: '';
+			position: absolute;
+         z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: .7;
+		}
+		&[data-social="vk"]::before {
+			background-image: url("../img/vk.svg");
+		}
+		&[data-social="fb"]::before {
+			background-image: url("../img/fb.svg");
+		}
+		&[data-social="phone"]::before,
+		&[data-social="addPhone"]::before {
+			background-image: url("../img/phone.svg");
+		}
+		&[data-social="mail"]::before {
+			background-image: url("../img/mail.svg");
+		}
+		&[data-social="other"]::before {
+			background-image: url("../img/other.svg");
+		}
+		&_more {
+			border: 1px solid rgba(152, 115, 255, .7);
+			line-height: 1.4rem;
+			font-size: .8rem;
+			font-weight: 600;
+			font-family: OpenSans, sans-serif;
+			background-color: transparent;
+			padding-right: 2px;
+			&::before {
+				display: none;
+			}
+		}
+		&.active {
+			.contacts__tooltip {
+				visibility: visible;
+			}
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+	&__tooltip {
+		position: absolute;
+		top: -4.5rem;
+		left: 40%;
+      display: flex;
+      align-items: center;
+		width: max-content;
+		z-index: -1;
+		justify-content: center;
+		padding: 1rem 1.5rem;
+		color: #fff;
+		background-color: $black;
+		font-size: 1.2rem;
+      visibility: hidden;
+      cursor: default;
+		span {
+			display: inline-block;
+			margin-right: .5rem;
+			font-weight: 400;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -2.2rem;
+			left: 50%;
+			margin-left: -13px;
+			z-index: -1;
+			display: inline-block;
+			border: 1.3rem solid transparent;
+			border-top: 2rem solid $black;
+		}
+	}
+	&__link {
+		color: #B89EFF;
+		font-weight: 700;
+      cursor: pointer;
+	}
+}
+.action {
+	&__btn {
+		position: relative;
+		padding-left: 1.6rem;
+		background-color: transparent;
+		font-weight: 400;
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 1px;
+			content: '';
+			width: 16px;
+			height: 16px;
+			background-repeat: no-repeat;
+		}
+		&_change {
+			margin-right: 2.5rem;
+			&::before {
+				background-image: url("../img/edit.svg");
+			}
+		}
+		&_delete {
+			&::before {
+				background-image: url("../img/cancel.svg");
+			}
+		}
+	}
+}
