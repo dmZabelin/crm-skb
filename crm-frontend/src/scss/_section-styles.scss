@@ -121,6 +121,12 @@
 		margin-left: -0.35rem;
 		width: 12rem;
 	}
+	&__message {
+		width: 100% !important;
+		text-align: center;
+		padding: 2rem;
+		font-size: 1.8rem;
+	}
 }
 .contacts {
 	&__btn {

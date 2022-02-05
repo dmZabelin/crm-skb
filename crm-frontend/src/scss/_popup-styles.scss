@@ -124,6 +124,10 @@
 		&:focus {
 			outline: none;
 			border-bottom: 1px solid $firm;
+			& + span {
+				transform-origin: top left;
+				transform: scale(0.8) translateY(-2rem);
+			}
 		}
 	}
 	&__contacts {
